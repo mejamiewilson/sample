@@ -9,7 +9,7 @@ Prereq's:
  - Make sure the Docker host is running
  - Clone this repo, run `docker build -t samplecontainer .` 
  - To run locally, type `docker run -p 4000:80 samplecontainer`
- - Tag the container `docker tag samplecontainer <username>/samplecontainer` where <username> is your docker hub username
+ - Tag the container `docker tag samplecontainer <username>/samplecontainer` (i.e. `docker tag samplecontainer jamieatdo/samplecontainer`)
 
 ## Create the container repo on docker hub
 
@@ -20,7 +20,7 @@ Prereq's:
 ## Push to the docker hub repo
 
  - To push to dockerhub, login via the terminal `docker login`
- - Run `docker push <username>/samplecontainer:latest`, replacing <username> with your docker hub username
+ - Run `docker push <username>/samplecontainer:latest`
 
 ## Install on Digital Ocean
 

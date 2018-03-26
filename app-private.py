@@ -17,10 +17,11 @@ def hello():
 
     html = "<h3>Hello {name}!</h3>" \
 	   "<h2>This container is called {ui}</h2>" \
-           "<b>Hostname:</b> {hostname}<br/>" \
+           "<p style='color:red;'>This is built from a private registry</p><br />" \
+	   "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}"
     return html.format(name=os.getenv("NAME", "world"), ui=os.getenv("UI", "not-set"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=80)
 
